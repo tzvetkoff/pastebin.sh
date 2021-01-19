@@ -393,6 +393,7 @@ do_paste() {
   if [[ -z "${1}" || "${1}" = '-' ]]; then
     PASTE_CODE="$(</dev/stdin)"
   else
+    [[ -z "${PASTE_NAME}" ]] && PASTE_NAME="${1}"
     PASTE_CODE="$(<"${1}")"
   fi
 
