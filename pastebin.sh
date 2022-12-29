@@ -498,7 +498,7 @@ while [[ -n "${1}" ]]; do
       -e*)         PASTE_EXPIRE="${1:2}";;
 
       --) PARSE='false';;
-      -*) echo "${0}: invalid option: ${1}" >&2; echo >&2; usage 1 >&2;;
+      -*) echo "${0}: invalid option: ${1}" >&2; echo >&2; do_help 1 >&2;;
       *)  ARGS+=("${1}");;
     esac
   else
